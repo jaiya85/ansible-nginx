@@ -1,0 +1,9 @@
+---
+- name: Install extra yum repos
+  command: yum install epel-release
+
+- name: Install nginx
+  command: yum install nginx
+
+- name: Start nginx
+  command: systemctl start nginx

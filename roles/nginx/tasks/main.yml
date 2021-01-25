@@ -1,7 +1,9 @@
 ---
 - name: yum upgrade
   become: true
-  shell: yum upgrade -y
+  yum:
+    name: upgrade
+    state: present
 
 - name: Install extra yum repos
   command: yum install epel-release

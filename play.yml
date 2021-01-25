@@ -1,7 +1,6 @@
 ---
 - name: Install Nginx on CentOS7
   hosts: test
-  become: true
-
+  
   roles:
     - nginx

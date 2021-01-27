@@ -1,0 +1,1 @@
+Deploy Nginx, and start Nginx service on CentOS 7 using Ansible 2.9

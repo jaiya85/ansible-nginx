@@ -1,2 +1,2 @@
 [test]
-192.168.1.193 ansible_sudo_pass=qaz729647402 ansible_user=jay
+192.168.1.193 ansible_sudo_pass=ping00pong ansible_user=jay

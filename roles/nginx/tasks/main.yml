@@ -1,15 +1,29 @@
 ---
-- name: yum upgrade
-  become: true
-  yum:
-    name: upgrade
-    state: present
 
 - name: Install extra yum repos
-  command: yum install epel-release
+  become: true
+  yum:
+    name: epel-release
+    state: present
 
 - name: Install nginx
-  command: yum install nginx
+  become: true
+  yum:
+    name: nginx
+    state: present
+  notify:
+    - PingNginx
+ 
 
-- name: Start nginx
-  command: systemctl start nginx
+#- name: ding nginx
+#  become: true
+#  service: 
+#    name: nginx 
+#    state: started 
+#    use: service
+
+#- name: yo Nginx
+#  become: true
+#  systemctl: 
+#    name: nginx.service
+#    state: started

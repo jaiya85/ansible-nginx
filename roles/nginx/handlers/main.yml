@@ -1,0 +1,7 @@
+---
+- name: PingNginx
+  become: true
+  service: 
+    name: nginx 
+    state: started 
+    use: service
